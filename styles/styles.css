@@ -90,18 +90,6 @@ footer {
     color: #444b54;
 }
 
-.sidebar nav ul li a[href="#personal-info"] {
-    text-decoration: none;
-    color: #00897b;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-
-.sidebar nav ul li a[href="#personal-info"]:hover {
-    color: #004d40;
-}
-
 header, main, footer {
     margin-left: 280px;
 }
@@ -139,6 +127,10 @@ header, main, footer {
     margin: 0;
     line-height: 1.5;
     color: #757575;
+}
+
+.sidebar-bio a[href="index.html"] {
+    text-decoration: none;
 }
 
 .photo-placeholder img {
