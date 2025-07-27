@@ -115,10 +115,16 @@ button:hover {
   flex-direction: column;
   align-items: flex-start;
   padding-left: var(--space-medium); /* Ensure consistent left padding */
+  opacity: 0.5; /* Dim all sections by default */
 }
 
 .signal__header {
   width: 100%;
+  opacity: 0.5; /* Fade section headers by default */
+}
+
+.signal__header:hover {
+  opacity: 1; /* Emphasize on hover */
 }
 
 p {
@@ -130,31 +136,55 @@ p {
   font-size: 1.5em; /* Set the same font size for both */
 }
 
-.simple-header {
+.simple__header {
   background-color: transparent; /* Make header transparent */
   padding: var(--space-small);
 }
 
-.simple-header nav ul {
+.simple__header nav ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.simple-header nav ul li {
+.simple__header nav ul li {
   margin-right: var(--space-medium);
 }
 
-.simple-header nav ul li a {
+.simple__header nav ul li a {
   color: var(--color-link);
   text-decoration: none;
 }
 
-.simple-header nav ul li a:hover {
+.simple__header nav ul li a:hover {
   text-decoration: underline;
 }
 
 .signal p {
   padding-left: var(--space-medium); /* Align text with section name */
+}
+
+body.index-page .signal__header dd {
+  display: block; /* Show section names on the index page */
+}
+
+.signal:hover ~ .signal {
+  opacity: 0.5; /* Make other sections less pronounced */
+}
+
+.signal:hover {
+  opacity: 1; /* Emphasize the hovered section */
+}
+
+.signal__content {
+  padding-left: var(--space-medium); /* Align with section name */
+}
+
+.signal__header a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.signal__header a:hover {
+  text-decoration: none; /* Remove underline on hover as well */
 }
