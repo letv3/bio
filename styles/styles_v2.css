@@ -188,3 +188,14 @@ body.index-page .signal__header dd {
 .signal__header a:hover {
   text-decoration: none; /* Remove underline on hover as well */
 }
+
+
+body.page-00 .signal[data-current="true"],
+body.page-01 .signal[data-current="true"],
+body.page-02 .signal[data-current="true"],
+body.page-03 .signal[data-current="true"],
+body.page-04 .signal[data-current="true"],
+body.page-05 .signal[data-current="true"],
+body.page-06 .signal[data-current="true"] {
+  opacity: 1; /* Ensure full opacity on the corresponding page */
+}
