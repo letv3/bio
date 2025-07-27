@@ -1,0 +1,160 @@
+
+:root {
+  /* Color palette */
+  --color-white: #fff;
+  --color-black: #222;
+  --color-neutral: #777;
+  --color-background: #edeae6;
+
+  /* Modular spacing (in em so it scales with text size) */
+  --space-x-small: 0.25em;
+  --space-small: 0.5em;
+  --space-medium: 1em;
+  --space-large: 2em;
+
+  /* Responsive base type size */
+  --type-base: calc(1.6em + 0.5vw);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; /* Set background color for the first page */
+  color: #595959; 
+  font-family: 'Source Sans Variable', Helvetica, sans-serif;
+  font-size: var(--type-base);
+  line-height: 1.6;
+  overflow: auto; /* Enable scroll */
+}
+
+h1, h2, h3, h4 {
+  margin-top: var(--space-small);
+  margin-bottom: var(--space-small);
+  font-weight: 600;
+}
+
+p, ul, ol {
+  margin-bottom: var(--space-medium);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Simple container centered with whitespace */
+.container {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: var(--space-large) var(--space-medium);
+}
+
+/* Forms styled simply */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  padding: var(--space-small);
+  border: 1px solid var(--color-neutral);
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+/* Responsive font scaling stops at large screens */
+@media (min-width: 45em) {
+  :root { --type-base: calc(0.9em + 0.9vw); }
+}
+
+@media (min-width: 91em) {
+  :root { --type-base: 2.2em; }
+}
+
+.signal__header dl {
+  display: flex;
+  align-items: center;
+}
+
+.signal__header dt {
+    font-size: 2em; /* Larger font size for section numbers */
+    font-weight: bold; /* Bold font for emphasis */
+}
+  
+.signal__header dd {
+    font-size: 1.5em; /* Slightly smaller font size for section names */
+    font-weight: bold; /* Bold font for emphasis */
+    display: none; /* Hide section names by default */
+}
+
+.signal__header:hover dd {
+  display: block; /* Show section names on hover */
+}
+
+.signal[data-current="true"] .signal__header dd {
+  display: block; /* Always show the section name for the current section */
+}
+
+.signal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: var(--space-medium); /* Ensure consistent left padding */
+}
+
+.signal__header {
+  width: 100%;
+}
+
+p {
+    font-size: 1.2em; /* Adjust font size for readability */
+}
+
+.signal__header dt,
+.signal__header dd {
+  font-size: 1.5em; /* Set the same font size for both */
+}
+
+.simple-header {
+  background-color: transparent; /* Make header transparent */
+  padding: var(--space-small);
+}
+
+.simple-header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.simple-header nav ul li {
+  margin-right: var(--space-medium);
+}
+
+.simple-header nav ul li a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.simple-header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.signal p {
+  padding-left: var(--space-medium); /* Align text with section name */
+}
