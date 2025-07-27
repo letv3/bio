@@ -199,3 +199,9 @@ body.page-05 .signal[data-current="true"],
 body.page-06 .signal[data-current="true"] {
   opacity: 1; /* Ensure full opacity on the corresponding page */
 }
+
+.signal,
+.signal__header dt,
+.signal__header dd {
+  transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
